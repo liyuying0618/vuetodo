@@ -1,0 +1,16 @@
+<template>
+    <div>
+        <li>
+            <label>
+                 <input type="checkbox"/>
+                <span>XXXX</span>
+            </label>
+            <button class="btn btn-danger" style="display:none;">删除</button>
+        </li>
+    </div>
+</template>
+<script>
+    export default {   
+        name:'TodoItem'
+    }
+</script>

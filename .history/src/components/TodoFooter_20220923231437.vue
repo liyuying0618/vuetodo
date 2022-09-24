@@ -1,0 +1,45 @@
+<template>
+    <div class="todo-footer">
+        <label>
+            <input type="checkbox"/>
+        </label>
+        <span>
+            <span>已完成 0</span>/全部<span>{{this.todos.length}}</span> 
+        </span>
+        <button class="btn btn-danger">清除已完成任务</button>
+    </div>
+</template>
+<script>
+export default {
+  name: "TodoFooter",
+  props:['todos'],
+  computed:{
+    doneTotal(){
+      return this.todos.reduce((pre,current)=>pre+(current.done)
+    }
+  }
+};
+</script>
+<style>
+.todo-footer {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 6px;
+  margin-top: 5px;
+}
+.todo-footer label {
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.todo-footer label input {
+  position: relative;
+  top: -1px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.todo-footer .btn {
+  float: right;
+  margin-top: 5px;
+}
+</style>
